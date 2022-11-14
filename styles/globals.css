@@ -1,5 +1,6 @@
 :root {
   --primary: #47308e;
+  --secondary : #00c9a3;
   --neutral-100: #fcf7ff;
   --neutral-200: #fffade;
   --gradient : linear-gradient(to right bottom, #47308e, #6549a9, #8264c5, #a07fe2, #be9cff);
@@ -13,6 +14,8 @@
 
 
 body {
-  background-image: linear-gradient(to right bottom, #47308e, #6549a9, #8264c5, #a07fe2, #be9cff);
+  background-image: linear-gradient(to left top, #47308e, #6549a9, #8264c5, #a07fe2, #be9cff);
   min-height: 100vh;
 }
+
+
