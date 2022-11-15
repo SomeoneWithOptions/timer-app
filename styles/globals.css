@@ -46,7 +46,7 @@ body {
     #a07fe2,
     #be9cff
   );
-  height: 100vh;
+  height: calc(100vh - .5rem);
 }
 
 .animationOut {
@@ -75,5 +75,14 @@ body {
   100% {
     transform: translateX(100%);
     opacity: 0;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
