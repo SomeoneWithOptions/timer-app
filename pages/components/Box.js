@@ -8,7 +8,7 @@ function Box({ children }) {
           margin: 0.5rem;
           background-color: var(--neutral-200);
           border-radius: 1rem;
-          height: 200px;
+          height: 250px;
           padding: 1rem;
           box-shadow: var(--shadow);
           display: flex;
