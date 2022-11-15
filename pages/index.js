@@ -1,18 +1,16 @@
 import NewTimerIcon from "./components/NewTimerIcon";
 import AddTimerMenu from "./components/AddTimerMenu";
-import Box from "./components/Box";
+import MinutesBox from "./components/MinutesBox";
+import SecondsBox from "./components/SecondsBox";
 import { useEffect, useState } from "react";
 
 export default function Home() {
   const [menuIsVisible, setMenuIsVisible] = useState(false);
 
-  useEffect(() => {
-    console.log(menuIsVisible);
-  }, [menuIsVisible]);
-
   return (
     <>
-      <Box/>
+      <MinutesBox />
+      <SecondsBox />
       <AddTimerMenu menuIsVisible={menuIsVisible} />
       <NewTimerIcon setMenuIsVisible={setMenuIsVisible} />
     </>

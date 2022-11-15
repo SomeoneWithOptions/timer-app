@@ -1,6 +1,10 @@
+import { Sono } from "@next/font/google";
+
+const sonoFont = Sono();
+
 function Box({ children }) {
   return (
-    <div className="box">
+    <div className={`box ${sonoFont.className}`}>
       <p>{children}</p>
       <style jsx>{`
         .box {
@@ -11,6 +15,9 @@ function Box({ children }) {
           height: 200px;
           padding: 1rem;
           box-shadow: var(--shadow);
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
       `}</style>
     </div>
