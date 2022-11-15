@@ -10,9 +10,11 @@ function Button({ children, color, fontColor }) {
           padding: 0.8rem 1.5rem;
           border: none;
           border-radius: 1rem;
-          font-size: 1.2rem;
+          font-size: 1.3rem;
           box-shadow: var(--shadow);
           border-bottom: 2px solid var(--primary);
+          font-family: 'Rubik', sans-serif;
+          font-weight: 200;
         }
 
         button:hover {

@@ -4,8 +4,8 @@ import StopButton from "./StopButton";
 function AddTimerMenu({ menuIsVisible }) {
   return (
     <div className={menuIsVisible ? "animationIn main" : "animationOut main"}>
-      <div className="minutes input">Minutes <input type='text'/></div>
-      <div className="seconds input">Seconds <input type='text'/></div>
+      <div className="minutes input">Minutes <input type='number'/></div>
+      <div className="seconds input">Seconds <input type='number'/></div>
       <div className="button-container">
         <StartButton />
         <StopButton />
@@ -53,6 +53,8 @@ function AddTimerMenu({ menuIsVisible }) {
           text-align: center;
           border-bottom : 2px solid var(--primary) ;
           box-shadow: var(--shadow);
+          font-family: 'Rubik', sans-serif;
+          font-weight: 200;
         }
       `}</style>
     </div>
