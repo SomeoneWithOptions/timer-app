@@ -9,15 +9,19 @@ function NewTimerIcon() {
        .add-container {
           width: 80px;
           height: 80px;
-          position : absolute;
+          position : fixed;
           bottom: 20px;
           right: 20px;
+        
+          border-radius : 50%;
+          box-shadow: var(--shadow-high);
         }
         img {
           width: 100%;
           height: 100%;
-          filter : invert(1);
+          filter: invert(85%) saturate(200%);
           cursor: pointer;
+          color : red ; 
         }
 
         img:hover {
