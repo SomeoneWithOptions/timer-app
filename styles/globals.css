@@ -48,3 +48,32 @@ body {
   );
   height: 100vh;
 }
+
+.animationOut {
+  animation: slideOut 0.5s ease forwards;
+}
+
+.animationIn {
+  animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes slideOut {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}

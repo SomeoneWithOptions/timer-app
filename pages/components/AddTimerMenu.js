@@ -1,15 +1,24 @@
+import StartButton from "./StartButton";
+import StopButton from "./StopButton";
+
 function AddTimerMenu({ menuIsVisible }) {
   return (
-    <div className={menuIsVisible ? "animationIn" : "animationOut"}>
-      Timer
+    <div className={menuIsVisible ? "animationIn main" : "animationOut main"}>
+      <div className="minutes input">Minutes <input type='text'/></div>
+      <div className="seconds input">Seconds <input type='text'/></div>
+      <div className="button-container">
+        <StartButton />
+        <StopButton />
+      </div>
       <style jsx>{`
-        div {
+        .main {
           display: flex;
+          flex-direction: column;
           align-items: center;
-          justify-content: center;
+          justify-content: space-evenly;
 
-          width: 200px;
-          height: 150px;
+          width: 300px;
+          height: 400px;
           position: fixed;
           right: 20px;
           bottom: 120px;
@@ -22,33 +31,28 @@ function AddTimerMenu({ menuIsVisible }) {
           color: var(--neutral-200);
         }
 
-        .animationOut {
-          animation: slideOut 0.5s ease forwards;
+        .button-container {
+          margin: 0 0.5rem;
+          width: 100%;
+
+          display: flex;
+          justify-content: space-evenly;
         }
 
-        .animationIn {
-          animation: slideIn 0.5s ease forwards;
+        div {
+          // border : 1px solid red ; 
         }
 
-        @keyframes slideIn {
-          0% {
-            transform: translateX(100%);
-            opacity: 0;
-          }
-          100% {
-            transform: translateX(0%);
-            opacity: 1;
-          }
-        }
-        @keyframes slideOut {
-          0% {
-            transform: translateX(0%);
-            opacity: 1;
-          }
-          100% {
-            transform: translateX(100%);
-            opacity: 0;
-          }
+        input {
+          background-color: var(--neutral-200);
+          border : none ;
+          outline : none ;
+          border-radius: 1rem;
+          width: 80px;
+          font-size: 3rem;
+          text-align: center;
+          border-bottom : 2px solid var(--primary) ;
+          box-shadow: var(--shadow);
         }
       `}</style>
     </div>

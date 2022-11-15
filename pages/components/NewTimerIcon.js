@@ -1,4 +1,5 @@
 function NewTimerIcon({ setMenuIsVisible }) {
+  
   const toggleMenu = () => {
     setMenuIsVisible((p) => !p);
   };

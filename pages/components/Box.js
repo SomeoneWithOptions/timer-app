@@ -1,10 +1,6 @@
-import { Sono } from "@next/font/google";
-
-const sonoFont = Sono();
-
 function Box({ children }) {
   return (
-    <div className={`box ${sonoFont.className}`}>
+    <div className="box">
       <p>{children}</p>
       <style jsx>{`
         .box {
