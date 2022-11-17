@@ -9,8 +9,8 @@ function AddTimerMenu({ menuIsVisible }) {
         <input type='number' id='minutes-input' />
       </div>
       <div className='seconds input'>
-        <label htmlFor='minutes-input'>Seconds </label>
-        <input type='number' id='minutes-input' />
+        <label htmlFor='seconds-input'>Seconds </label>
+        <input type='number' id='seconds-input' />
       </div>
       <div className='button-container'>
         <StartButton />
