@@ -46,10 +46,6 @@ function AddTimerMenu({ menuIsVisible }) {
           justify-content: space-evenly;
         }
 
-        div {
-          // border : 1px solid red ;
-        }
-
         input {
           background-color: var(--neutral-200);
           border: none;

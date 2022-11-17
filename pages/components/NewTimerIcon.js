@@ -1,14 +1,18 @@
-import Image from 'next/image'
+import Image from "next/image";
+import { useRef } from "react";
 
 function NewTimerIcon({ setMenuIsVisible }) {
-  
+  const buttonRef = useRef(null);
+
   const toggleMenu = () => {
     setMenuIsVisible((p) => !p);
+    buttonRef.current.blur();
+    console.log(buttonRef.current);
   };
 
   return (
-    <div className="add-container">
-      <img src="/add.png" alt="add icon" onClick={toggleMenu} />
+    <div className='add-container'>
+      <img src='/add.png' alt='add icon' onClick={toggleMenu} ref={buttonRef} />
 
       <style jsx>{`
         .add-container {
@@ -37,7 +41,6 @@ function NewTimerIcon({ setMenuIsVisible }) {
           border-radius: 50%;
           background-color: transparent;
         }
-
       `}</style>
     </div>
   );
