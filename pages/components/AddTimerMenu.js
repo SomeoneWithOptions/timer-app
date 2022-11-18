@@ -4,13 +4,17 @@ import StopButton from "./StopButton";
 function AddTimerMenu({ menuIsVisible }) {
   return (
     <div className={menuIsVisible ? "animationIn main" : "animationOut main"}>
-      <div className='minutes input'>
-        <label htmlFor='minutes-input'>Minutes </label>
-        <input type='number' id='minutes-input' />
+      <div className='work input'>
+        <label htmlFor='work-input'>Work </label>
+        <input type='number' id='work-input' />
       </div>
-      <div className='seconds input'>
-        <label htmlFor='seconds-input'>Seconds </label>
-        <input type='number' id='seconds-input' />
+      <div className='rest input'>
+        <label htmlFor='rest-input'>Rest </label>
+        <input type='number' id='rest-input' />
+      </div>
+      <div className='minutes input'>
+        <label htmlFor='minutes-input'>Intervals </label>
+        <input type='number' id='rest-input' />
       </div>
       <div className='button-container'>
         <StartButton />
@@ -52,12 +56,21 @@ function AddTimerMenu({ menuIsVisible }) {
           outline: none;
           border-radius: 1rem;
           width: 80px;
-          font-size: 3rem;
+          font-size: 2.5rem;
           text-align: center;
           border-bottom: 2px solid var(--primary);
           box-shadow: var(--shadow);
           font-family: "Rubik", sans-serif;
           font-weight: 200;
+        
+        }
+
+        .rest, .minutes, .work {
+          padding : 1rem;
+          display: flex;
+          width: 100%;
+          // border : solid 1px red;
+          justify-content: space-between;
         }
       `}</style>
     </div>
