@@ -4,7 +4,6 @@ function Box({ children }) {
       <span>{children}</span>
       <style jsx>{`
         .box {
-          border: solid 1px var(--neutral-200);
           margin: 0.5rem;
           background-color: var(--neutral-200);
           border-radius: 1rem;

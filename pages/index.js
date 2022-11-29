@@ -21,9 +21,10 @@ export default function Home() {
         <title>Timer App</title>
         <link rel='preconnect' href='/rubik.ttf' />
       </Head>
-
-      <MinutesBox />
-      <SecondsBox />
+      <div className="dataContainer">
+        <MinutesBox />
+        <SecondsBox />
+      </div>
       <AddTimerMenu menuIsVisible={menuIsVisible} />
       <NewTimerIcon setMenuIsVisible={setMenuIsVisible} />
     </>

@@ -1,7 +1,11 @@
+import { useEffect } from "react";
 import StartButton from "./StartButton";
 import StopButton from "./StopButton";
 
 function AddTimerMenu({ menuIsVisible }) {
+
+ 
+
   return (
     <div className={menuIsVisible ? "animationIn main" : "animationOut main"}>
       <div className='work input'>

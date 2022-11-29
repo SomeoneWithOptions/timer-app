@@ -1,13 +1,13 @@
 import Image from "next/image";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 function NewTimerIcon({ setMenuIsVisible }) {
   const buttonRef = useRef(null);
 
+
   const toggleMenu = () => {
     setMenuIsVisible((p) => !p);
     buttonRef.current.blur();
-    console.log(buttonRef.current);
   };
 
   return (
