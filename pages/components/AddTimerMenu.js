@@ -1,24 +1,43 @@
-import { useEffect } from "react";
 import StartButton from "./StartButton";
 import StopButton from "./StopButton";
+import { useState } from "react";
 
 function AddTimerMenu({ menuIsVisible }) {
-
- 
+  const [workInput, setWorkInput] = useState(0);
+  const [restInput, setRestInput] = useState(0);
+  const [intelvalInput, setIntervalInput] = useState(0);
 
   return (
     <div className={menuIsVisible ? "animationIn main" : "animationOut main"}>
       <div className='work input'>
         <label htmlFor='work-input'>Work </label>
-        <input type='number' id='work-input' />
+        <input
+          type='number'
+          id='work-input'
+          value={workInput}
+          onChange={(e) => setWorkInput(e.target.value)}
+          max='999'
+        />
       </div>
       <div className='rest input'>
         <label htmlFor='rest-input'>Rest </label>
-        <input type='number' id='rest-input' />
+        <input
+          type='number'
+          id='rest-input'
+          value={restInput}
+          onChange={(e) => setRestInput(e.target.value)}
+          max='999'
+        />
       </div>
       <div className='minutes input'>
         <label htmlFor='minutes-input'>Intervals </label>
-        <input type='number' id='rest-input' />
+        <input
+          type='number'
+          id='rest-input'
+          value={intelvalInput}
+          onChange={(e) => setIntervalInput(e.target.value)}
+          max='999'
+        />
       </div>
       <div className='button-container'>
         <StartButton />
@@ -41,7 +60,7 @@ function AddTimerMenu({ menuIsVisible }) {
           background-color: var(--secondary);
           box-shadow: var(--shadow);
 
-          font-size: 3rem;
+          font-size: 2.5rem;
           color: var(--neutral-200);
           opacity: 0;
         }
@@ -60,17 +79,18 @@ function AddTimerMenu({ menuIsVisible }) {
           outline: none;
           border-radius: 1rem;
           width: 80px;
-          font-size: 2.5rem;
+          font-size: 2rem;
           text-align: center;
           border-bottom: 2px solid var(--primary);
           box-shadow: var(--shadow);
           font-family: "Rubik", sans-serif;
           font-weight: 200;
-        
         }
 
-        .rest, .minutes, .work {
-          padding : 1rem;
+        .rest,
+        .minutes,
+        .work {
+          padding: 1rem;
           display: flex;
           width: 100%;
           // border : solid 1px red;
