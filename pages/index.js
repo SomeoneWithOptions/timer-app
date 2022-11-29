@@ -4,7 +4,6 @@ import MinutesBox from "./components/MinutesBox";
 import SecondsBox from "./components/SecondsBox";
 import { useState } from "react";
 import Head from "next/head";
-import AppContext, { AppProvider } from "./components/AppContext";
 
 export default function Home() {
   const [menuIsVisible, setMenuIsVisible] = useState(false);
