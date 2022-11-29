@@ -4,7 +4,8 @@ import { useState, useContext } from "react";
 import AppContext from "./AppContext";
 
 function AddTimerMenu({ menuIsVisible }) {
-  const { workInput, setWorkInput } = useContext(AppContext);
+  // const { workInput, setWorkInput } = useContext(AppContext);
+  const [workInput, setWorkInput] = useState(0);
   const [restInput, setRestInput] = useState(0);
   const [intelvalInput, setIntervalInput] = useState(0);
 
