@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 
-const AppContext = createContext();
+export const AppContext = createContext();
 
 export function AppProvider({ children }) {
   const [workInput, setWorkInput] = useState(3);
