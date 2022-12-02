@@ -1,10 +1,11 @@
 import NewTimerIcon from "./components/NewTimerIcon";
 import AddTimerMenu from "./components/AddTimerMenu";
-import MinutesBox from "./components/MinutesBox";
-import SecondsBox from "./components/SecondsBox";
+import WorkBox from "./components/WorkBox";
+import RestBox from "./components/RestBox";
 import { useState } from "react";
 import Head from "next/head";
 import AppContextProvider from "./components/AppContext";
+import IntervalsBox from "./components/IntervalsBox";
 
 export default function Home() {
   const [menuIsVisible, setMenuIsVisible] = useState(false);
@@ -24,8 +25,9 @@ export default function Home() {
       </Head>
       <AppContextProvider>
         <div className='dataContainer'>
-          <MinutesBox />
-          <SecondsBox />
+          <WorkBox />
+          <RestBox />
+          <IntervalsBox/>
         </div>
         <AddTimerMenu menuIsVisible={menuIsVisible} />
         <NewTimerIcon setMenuIsVisible={setMenuIsVisible} />

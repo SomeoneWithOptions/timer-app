@@ -4,7 +4,7 @@ export const AppContext = createContext({});
 
 function AppContextProvider({ children }) {
   const [w, setW] = useState(5);
-  const [wDisplay, setWDisplay] = useState(1);
+  const [wDisplay, setWDisplay] = useState(0);
 
   const value = {
     w,
