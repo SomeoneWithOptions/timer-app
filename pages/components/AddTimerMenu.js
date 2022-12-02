@@ -5,9 +5,14 @@ import { useContext } from "react";
 import { AppContext } from "./AppContext";
 
 function AddTimerMenu({ menuIsVisible }) {
-  const { workInput, setWorkInput } = useContext(AppContext);
-  const [restInput, setRestInput] = useState(0);
-  const [intelvalInput, setIntervalInput] = useState(0);
+  const {
+    workInput,
+    setWorkInput,
+    restInput,
+    setRestInput,
+    intervalsInput,
+    setIntervalsInput,
+  } = useContext(AppContext);
 
   return (
     <div className={menuIsVisible ? "animationIn main" : "animationOut main"}>
@@ -36,8 +41,8 @@ function AddTimerMenu({ menuIsVisible }) {
         <input
           type='number'
           id='rest-input'
-          value={intelvalInput}
-          onChange={(e) => setIntervalInput(e.target.value)}
+          value={intervalsInput}
+          onChange={(e) => setIntervalsInput(e.target.value)}
           max='999'
         />
       </div>

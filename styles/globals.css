@@ -48,7 +48,7 @@ body {
     #a07fe2,
     #be9cff
   );
-  height: calc(100vh - .5rem);
+  height: calc(100vh);
   font-family: 'Rubik', sans-serif;
   font-weight: 300;
 }

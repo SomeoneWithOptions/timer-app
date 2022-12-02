@@ -1,18 +1,25 @@
 import Box from "./Box";
 import { useContext, useEffect } from "react";
 import { AppContext } from "./AppContext";
+import StartButton from "./StartButton";
 
 function WorkBox() {
-  const { workDisplay, setWorkDisplay } = useContext(AppContext);
+  const { workDisplay, setWorkDisplay,restInterval } = useContext(AppContext);
 
   useEffect(() => {
-    const interval = setInterval(() => {
+ 
+    const workInterval = setInterval(() => {
       if (workDisplay > 0) {
         setWorkDisplay(workDisplay - 1);
       }
     }, 1000);
-    return () => clearInterval(interval);
+
+    if (workDisplay === 0) {
+      clearInterval(workInterval);
+    }
+    return () => clearInterval(workInterval);
   }, [workDisplay]);
+
   return (
     <Box>
       <p className='work-number'>{workDisplay}</p>
