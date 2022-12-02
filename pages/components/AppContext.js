@@ -1,10 +1,10 @@
 import { createContext, useState } from "react";
 
-export const AppContext = createContext(null);
+export const AppContext = createContext({});
 
-function AppContextProvider(props) {
-  const [w, setW] = useState(2);
-  const [wDisplay, setWDisplay] = useState(0);
+function AppContextProvider({ children }) {
+  const [w, setW] = useState(5);
+  const [wDisplay, setWDisplay] = useState(1);
 
   const value = {
     w,
@@ -13,9 +13,7 @@ function AppContextProvider(props) {
     setWDisplay,
   };
 
-  return (
-    <AppContext.Provider value={value}>{props.children}</AppContext.Provider>
-  );
+  return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 }
 
 export default AppContextProvider;
