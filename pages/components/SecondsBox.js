@@ -1,8 +1,12 @@
 import Box from "./Box";
+import { useContext } from "react";
+import { AppContext } from "./AppContext";
 function SecondsBox() {
+  const { wDisplay } = useContext(AppContext);
+
   return (
     <Box>
-      <p className='seconds-number'>0</p>
+      <p className='seconds-number'>{wDisplay}</p>
       <p className='seconds-text'>Seconds</p>
       <style jsx>{`
         p {

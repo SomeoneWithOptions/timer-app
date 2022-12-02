@@ -1,14 +1,22 @@
 import { createContext, useState } from "react";
 
-const appContext = createContext(null);
+export const AppContext = createContext();
 
 function AppContextProvider({ children }) {
     const [w, setW] = useState(2);
+    const [wDisplay, setWDisplay] = useState(0);
+
+   const  value = {
+        w,
+        setW,
+        wDisplay,
+        setWDisplay,
+    }
 
     return (
-        <appContext.Provider value={{ w, setW }}>
+        <AppContext.Provider value={value}>
             {children}
-        </appContext.Provider>
+        </AppContext.Provider>
     );
 }
 
