@@ -1,9 +1,10 @@
 import Box from "./Box";
 import { useContext, useEffect } from "react";
 import { AppContext } from "./AppContext";
-import StartButton from "./StartButton";
 
 function WorkBox() {
+
+  const shortBeep = new Audio("/short-beep.mp3");
   const { workDisplay, setWorkDisplay,restInterval } = useContext(AppContext);
 
   useEffect(() => {
@@ -16,6 +17,7 @@ function WorkBox() {
 
     if (workDisplay === 0) {
       clearInterval(workInterval);
+      shortBeep.play();
     }
     return () => clearInterval(workInterval);
   }, [workDisplay]);
