@@ -1,11 +1,11 @@
 import StartButton from "./StartButton";
 import StopButton from "./StopButton";
 import { useState } from "react";
-
+import { useContext } from "react";
+import { AppContext } from "./AppContext";
 
 function AddTimerMenu({ menuIsVisible }) {
-  // const { workInput, setWorkInput } = useContext(AppContext);
-  const [workInput, setWorkInput] = useState(0);
+  const { workInput, setWorkInput } = useContext(AppContext);
   const [restInput, setRestInput] = useState(0);
   const [intelvalInput, setIntervalInput] = useState(0);
 

@@ -1,6 +1,6 @@
-function Button({ children, color, fontColor }) {
+function Button({ children, color, fontColor, onClick }) {
   return (
-    <button>
+    <button onClick={onClick}>
       {children}
 
       <style jsx>{`

@@ -54,11 +54,11 @@ body {
 }
 
 .animationOut {
-  animation: slideOut 0.5s ease forwards;
+  animation: slideOut 0.5s ease both;
 }
 
 .animationIn {
-  animation: slideIn 0.5s ease forwards;
+  animation: slideIn 0.5s ease both;
 }
 
 
