@@ -3,19 +3,19 @@ import { useContext, useEffect } from "react";
 import { AppContext } from "./AppContext";
 
 function WorkBox() {
-  const { wDisplay, setWDisplay } = useContext(AppContext);
+  const { workDisplay, setWorkDisplay } = useContext(AppContext);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (wDisplay > 0) {
-        setWDisplay(wDisplay - 1);
+      if (workDisplay > 0) {
+        setWorkDisplay(workDisplay - 1);
       }
     }, 1000);
     return () => clearInterval(interval);
-  }, [wDisplay]);
+  }, [workDisplay]);
   return (
     <Box>
-      <p className='work-number'>{ wDisplay}</p>
+      <p className='work-number'>{workDisplay}</p>
       <p className='work-text'>Work</p>
       <style jsx>{`
         p {

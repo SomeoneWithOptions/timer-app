@@ -4,12 +4,8 @@ import { useState } from "react";
 import { useContext } from "react";
 import { AppContext } from "./AppContext";
 
-
 function AddTimerMenu({ menuIsVisible }) {
- 
-  const { w, setW } = useContext(AppContext);
-
-  const [workInput, setWorkInput] = useState(0);
+  const { workInput, setWorkInput } = useContext(AppContext);
   const [restInput, setRestInput] = useState(0);
   const [intelvalInput, setIntervalInput] = useState(0);
 
@@ -20,8 +16,8 @@ function AddTimerMenu({ menuIsVisible }) {
         <input
           type='number'
           id='work-input'
-          value={w}
-          onChange={(e) => setW(e.target.value)}
+          value={workInput}
+          onChange={(e) => setWorkInput(e.target.value)}
           max='999'
         />
       </div>
