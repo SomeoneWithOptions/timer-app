@@ -8,7 +8,7 @@ function SecondsBox() {
     <Box>
       <p className='seconds-number'>{wDisplay}</p>
       <p className='seconds-text'>Seconds</p>
-      <style jsx>{`
+      <style jsx>{` 
         p {
           text-align: center;
         }
